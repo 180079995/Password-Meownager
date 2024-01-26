@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 200px;
+      padding: 10px;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin: 5px 0;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #15724d;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button[for="small"] {
+      width: 15px;
+      height: 15px;
+      border: none;
+      background-color: #FFFFFF;
+      cursor: pointer;
+      float: right;
+    }
+    #loggedInForm p{
+      display: inline;
+      margin: 3px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Password Manager!</h2>
+
+<div id="noclientForm">
+  <h2>The Client App is not launched!</h2>
+  <button type="button" id="RetryButton">Retry</button>
+</div>
+
+<div id="loginForm" style="display: none;">
+  <h2>Login</h2>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+    <button type="button" id="loginButton">Login</button>
+    <h2></h2>
+    <button type="button" id="RegisterButton">Register</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<div id="loggedInForm" style="display: none;">
+  <h2>Welcome!</h2>
+  <p style="display: inline; margin: 5px;">You are now logged in.</p>
+  <button type="button" id="LogoutButton" style="height: 75%; width: 32.7%;">Logout</button>
+  <h2></h2>
+  <button type="button" id="SearchButton">Search</button>
+  <div id="SearchResult1" style="font-size:200%; display: none;"><p></p><button for="small" type="button" id="CopynameButton"><img src="./assets/clip.png" style="width: 15px; height: 15px;"></button></div>
+  <div id="SearchResult2" style="display: none; height: 20px;"><p style="display: none; font-size:200%;"> </p><button for="small" type="button" id="CopypassButton"><img src="./assets/clip.png" style="width: 15px; height: 15px;"></button><button for="small" type="button" id="showButton" style="display:  inline;"><img src="./assets/show.png" id="showImage" style="width: 15px; height: 15px;"></button></div>
+  <h2></h2>
+  <!-- <div id="SearchResult3" style="font-size:150%; display: none;"><span style="display: block;">Remark:</span><p></p></div>
+  <h2></h2>-->
+  <h2></h2>
+  <button type="button" id="NewButton">New</button>
+  <div id="loggedresult"></div>
+</div>
+
+<div id="NewForm" style="display: none;">
+  <label for="username">Username</label>
+  <input type="text" id="NewUsername" name="NewUsername" placeholder="Enter your username">
+  <label for="password">Password</label>
+  <input type="password" id="NewPassword" name="NewPassword" placeholder="Enter your password">
+  <!--<label for="password">Remark:</label>
+  <input type="text" id="NewRemark" name="RemarkPassword" placeholder="Remark(Optional):">
+  -->
+  <button type="button" id="SubmitButton">Submit</button>
+</div>
+
+<script src="popup.js"></script>
+</body>
+</html>

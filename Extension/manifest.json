@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Password Manager",
+  "version": "1.0",
+  "description": "A Password Manager",
+  "action": {
+    "default_popup": "./src/popup.html",
+    "default_icon": "./assets/icon.png"
+  },
+  "permissions": [
+	"bookmarks",
+	"activeTab",
+	"clipboardWrite"	
+	]
+}
